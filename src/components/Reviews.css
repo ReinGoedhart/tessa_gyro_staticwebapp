@@ -1,0 +1,52 @@
+
+
+.brown{
+    background-color: #b58270;
+}
+
+.grey{
+    background-color: #e6d6c7;
+}
+
+.blue{
+    background-color: #abc7c7;
+}
+
+.review-grid > article{
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+.review-grid:nth-child(1) {
+    grid-area: one;
+}
+.review-grid:nth-child(2) {
+    grid-area: two;
+
+}
+.review-grid:nth-child(3) {
+    grid-area: three;
+}
+
+.review-grid{
+    
+    color: grey;
+    margin: 2rem auto ;
+    max-width: 80rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+     'one'
+     'two'
+     'three'
+}
+
+@media screen and (min-width: 50em){
+    .review-grid {
+        grid-template-areas:
+        "one two three"
+    }
+  }
+
+   

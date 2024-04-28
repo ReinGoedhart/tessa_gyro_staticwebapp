@@ -1,24 +1,27 @@
-import logo from "./logo.svg";
+import { Navbar } from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Dansblok from "./pages/Dansblok";
+
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Calender from "./pages/Calender";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> Rein Gaat lekker!, nu in develop
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Calender" element={<Calender />} />
+          <Route path="/Gallery" element={<Gallery />} />
+          <Route path="/Dansblok" element={<Dansblok />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 

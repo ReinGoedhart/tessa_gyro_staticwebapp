@@ -1,0 +1,159 @@
+.SocialList{
+    display: block;
+    text-align: left;
+    list-style: none;
+
+}
+.SocialList > li{
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.darkest{
+    fill: #525758;
+    background: #002c36;
+}
+
+.dark{
+    fill: #004e54;
+    background: #004e54;
+    fill: #f7a288;
+    background: #f7a288;
+}
+
+.light{
+    fill: #6ccea4;
+    background: #6ccea4;
+}
+
+.lightest{
+    fill: whitesmoke;
+    background: whitesmoke;
+}
+
+#hoofdafbeelding{
+    width: 100%;
+}
+
+.media-container{
+    margin-top: -4px;
+}
+
+.content-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.text-container{
+    margin: auto;
+
+    padding: 10px;  
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    padding: 5rem;
+    max-width: 40rem;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container >img{
+   max-height: 30rem;
+   padding: 1rem;
+}
+
+#practise-pictures{
+    display: grid;
+    grid-template-columns: 30% 30%;
+}
+#practise-pictures > img {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: 70em){
+    .text-container{
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+}
+@media (max-width: 55em){
+    .content-container{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        margin: 0rem 0rem;
+    }
+    .text-container{
+        font-size: 1rem;
+    }
+    
+    .image-container >img{
+    max-height: none;
+    width: 100%;
+    padding: 1rem;
+    }
+
+    .SocialList{
+        margin: 0;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .SocialList > li{
+        margin: 0.25rem 0rem;
+        padding-left: 5rem;
+
+    }
+}
+
+@media (min-width: 160em){
+    #hoofdafbeelding{
+        padding: 0rem 40rem;        
+    }
+    .media-container{
+        margin: 0rem 40rem;
+    }
+}
+
+.wave {
+    top: 0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background: transparent;
+    transform: rotate(180deg);
+    
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(237% + 1.3px);
+    height: 84px;
+}
+
+.wavetwo {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wavetwo svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 52px;
+    transform: rotateY(180deg);
+}
+
+

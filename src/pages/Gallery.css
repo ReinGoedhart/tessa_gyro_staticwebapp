@@ -1,0 +1,27 @@
+
+.gallery-container{
+    margin: 1rem;
+}
+
+.grid-even-columns{
+    display: grid;
+    gap:2rem;
+}
+
+.flow{
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 60em){
+    .grid-even-columns{
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+}
+@media (min-width: 120em){
+    .grid-even-columns{
+        grid-template-columns: repeat(5, 1fr);
+
+    }
+}
