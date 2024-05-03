@@ -1,4 +1,5 @@
 import { DividerTypeOne, DividerTypeTwo } from "../components/Divider";
+import React, { useState, useEffect } from "react";
 import TessaWoutersHouding from "../img/tessawoutershoudingBlob.png";
 import LesGeven from "../img/Lesgeven.jpg";
 import LesGeven2 from "../img/Lesgeven2.jpg";
@@ -10,6 +11,16 @@ import { SocialIcon } from "react-social-icons";
 import "./Home.css";
 
 export default function Home() {
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    (async function () {
+      const { text } = await (await fetch(`/api/message`)).json();
+      setData(text);
+      console.log("did it!");
+    })();
+  }, []); // Pass an empty dependency array here
+
   return (
     <>
       <IntroScreen />
